@@ -1,9 +1,9 @@
-var http = require('http');
-var _ = require('lodash');
-var express = require('express');
+var app = require('express')();
+var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var express = require('express');
+var _ = require('lodash');
 
-var app = express();
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
@@ -16,7 +16,12 @@ app.use(function(err, req, res, next) {
     res.status(500).send({ error: err.message });
 });
 
-http.createServer(app)
-  .listen(9999, function() {
-      console.log('Running on port 9999');
+http.listen(9999, function() {
+    console.log('Running on port 9999');
+});
+
+io.on('connection', function(socket){
+  socket.on('order', function(order){
+  	console.log(order);
   });
+});
