@@ -1,6 +1,7 @@
 var http = require('http');
 var _ = require('lodash');
 var express = require('express');
+var io = require('socket.io')(http);
 
 var app = express();
 app.use(express.static('dist'));
@@ -16,6 +17,6 @@ app.use(function(err, req, res, next) {
 });
 
 http.createServer(app)
-    .listen(9999, function() {
-        console.log('Running on port 9999');
-    });
+  .listen(9999, function() {
+      console.log('Running on port 9999');
+  });
