@@ -3,7 +3,9 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var express = require('express');
 var _ = require('lodash');
+var cookieParser = require('cookie-parser')
 
+app.use(cookieParser());
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
