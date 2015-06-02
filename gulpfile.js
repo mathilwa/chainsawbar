@@ -32,6 +32,7 @@ var watchifyOpts = browserifyOpts.set('watch', true);
 // ---
 
 gulp.task('default', ['build']);
+gulp.task('heroku:production', ['build']);
 
 gulp.task('build', function(cb) {
     runSequence('clean', ['build-css', 'build-js'], cb);
