@@ -18,8 +18,7 @@ var renderOrdrer = function() {
 
 module.exports = function() {
 
-	var socket = ioClient.getSocket();
-	socket.on('placeorder', function (drink) {
+	ioClient.getSocket().on('placeorder', function (drink) {
 
 		ordrer.push(drink);
 		renderOrdrer();
