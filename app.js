@@ -7,12 +7,7 @@ var _ = require('lodash');
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
-
 require('./app/routes')(app);
-
-app.get('/hello', function(req, res) {
-    return res.send('world');
-});
 
 app.use(function(err, req, res, next) {
     require('util').inspect(err);
