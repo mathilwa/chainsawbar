@@ -22,9 +22,6 @@ var drinks = [
 
 module.exports = function() {
 
-	console.log('init bestillerApp');
-
-
 	React.renderComponent(
 	    <Drinkliste drinkliste={drinks}/>,
 	    document.getElementById('drinkliste')
