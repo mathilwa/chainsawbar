@@ -9,9 +9,11 @@ module.exports = React.createClass({
     },
 
     render: function() {
-        return <ul>
-                    <li>Øl<div class="bestillknapp">Bestill</div></li>
-                </ul>
+        var liste = this.props.drinkliste.map(function (drink) {
+            return <li>{drink.name}<div className="bestillknapp">Bestill</div></li>;
+        });
+
+        return <ul>{liste}</ul>
     }
 
 });
