@@ -1,6 +1,7 @@
 var React = require('react');
 
 var io = require('socket.io-client');
+var domready = require('domready');
 
 var Drinkliste = require('./components/Drinkliste.react');
 
@@ -28,11 +29,7 @@ React.renderComponent(
 );
 
 
-(function(socket) {
-
-	socket.emit('order', {
-		name : 'Pina Colada'
-	});
+domready(function() {
 
 
-})(io());
+});
