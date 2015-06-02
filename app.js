@@ -20,6 +20,7 @@ io.on('connection', function(socket) {
 
   socket.on('order', function(order) {
   	console.log(order);
+  	socket.emit('placeorder', order);
   });
   
 });

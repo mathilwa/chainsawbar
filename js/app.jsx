@@ -2,7 +2,8 @@ var React = require('react');
 
 var io = require('socket.io-client');
 var domready = require('domready');
-require('./ioClient').init();
+var ioClient = require('./ioClient');
+ioClient.init();
 
 var Drinkliste = require('./components/Drinkliste.react');
 
@@ -31,6 +32,9 @@ React.renderComponent(
 
 
 domready(function() {
-
+	var socket = ioClient.getSocket();
+	socket.on('placeorder', function (drink) {
+		alert(drink);
+	});
 
 });
