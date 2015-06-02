@@ -1,4 +1,5 @@
 var React = require('react');
+var orderService = require('../orderService');
 
 module.exports = React.createClass({
 
@@ -8,10 +9,18 @@ module.exports = React.createClass({
         }
     },
 
+    sendOrder: function(event) {
+        console.log('Bestilling sendt', arguments);        
+    },
+
     render: function() {
         var liste = this.props.drinkliste.map(function (drink) {
-            return <li>{drink.name}<div className="bestillknapp">Bestill</div></li>;
-        });
+            var order = function() {
+                orderService.order(drink);
+            };
+
+            return <li>{drink.name}<button className="bestillknapp" onClick={order}>Bestill</button></li>;
+        }.bind(this));
 
         return <ul>{liste}</ul>
     }

@@ -1,7 +1,7 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var express = require('express');
 var _ = require('lodash');
 var cookieParser = require('cookie-parser')
 
@@ -16,10 +16,12 @@ app.use(function(err, req, res, next) {
     res.status(500).send({ error: err.message });
 });
 
-io.on('connection', function(socket){
-  socket.on('order', function(order){
+io.on('connection', function(socket) {
+
+  socket.on('order', function(order) {
   	console.log(order);
   });
+  
 });
 
 http.listen(9999, function() {

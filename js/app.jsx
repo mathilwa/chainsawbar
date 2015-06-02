@@ -2,6 +2,7 @@ var React = require('react');
 
 var io = require('socket.io-client');
 var domready = require('domready');
+require('./ioClient').init();
 
 var Drinkliste = require('./components/Drinkliste.react');
 
