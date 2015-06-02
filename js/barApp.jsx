@@ -19,12 +19,10 @@ var renderOrdrer = function() {
 module.exports = function() {
 
 	var socket = ioClient.getSocket();
-	console.log('socket', socket);
 	socket.on('placeorder', function (drink) {
 
 		ordrer.push(drink);
 		renderOrdrer();
-		
 
 	});
 
