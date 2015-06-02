@@ -1,40 +1,15 @@
-var React = require('react');
-
-var io = require('socket.io-client');
 var domready = require('domready');
 var ioClient = require('./ioClient');
 ioClient.init();
 
-var Drinkliste = require('./components/Drinkliste.react');
-
-var drink = function(id, name) {
-	return {
-		id : id,
-		name : name
-	};
-}
-
-var drinks = [
-			drink(1, 'Pina Colada'),
-			drink(2, 'Øl'),
-			drink(3, 'Dirty madde'),
-			drink(4, 'Jordgubbdaiquri'),
-			drink(5, 'Femfyra'),
-			drink(6, 'Rødvin'),
-			drink(7, 'Hvitvin'),						
-			drink(8, 'Whiskey Sour'),
-		];
-
-React.renderComponent(
-    <Drinkliste drinkliste={drinks}/>,
-    document.getElementById('drinkliste')
-);
-
-
 domready(function() {
-	var socket = ioClient.getSocket();
-	socket.on('placeorder', function (drink) {
-		alert(drink);
-	});
+
+	var body = document.querySelector('body');
+	if(body.dataset.app === 'bestillerApp') {
+		require('./bestillerApp')();
+	}
+	else {
+		require('./barApp')();
+	}
 
 });
