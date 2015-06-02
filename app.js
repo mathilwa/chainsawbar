@@ -24,6 +24,6 @@ io.on('connection', function(socket) {
   
 });
 
-http.listen(9999, function() {
+http.listen(process.env.PORT || 9999, function() {
     console.log('Running on port 9999');
 });
