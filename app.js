@@ -19,8 +19,7 @@ app.use(function(err, req, res, next) {
 io.on('connection', function(socket) {
 
   socket.on('order', function(order) {
-  	console.log(order);
-  	socket.emit('placeorder', order);
+  	socket.broadcast.emit('placeorder', order);
   });
   
 });
