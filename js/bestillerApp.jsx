@@ -1,6 +1,7 @@
 var React = require('react');
 var domready = require('domready');
 var Drinkliste = require('./components/Drinkliste.react');
+var Brukernavn = require('./components/Brukernavn.react');
 var currentUser = require('./userService').currentUser();
 
 var drink = function(id, name) {
@@ -31,6 +32,11 @@ module.exports = function() {
 	React.renderComponent(
 	    <Drinkliste drinkliste={drinks}/>,
 	    document.getElementById('drinkliste')
+	);
+
+	React.renderComponent(
+	    <Brukernavn name={currentUser.getName()}/>,
+	    document.getElementById('brukernavn')
 	);
 };
 

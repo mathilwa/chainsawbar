@@ -96,14 +96,14 @@ ul {
     border-radius: 5px;
 }
 
+.bestilling .bestilling-drinknavn {
+	font-weight: bold;
+}
+
 .bestilling ul {
 	padding-left: 0;
 }
 
-
-.bestilling span {
-	display: table;
-}
 
 .bestillknapp {
 	margin-right: 15px;
@@ -123,4 +123,8 @@ ul {
 .active .bestillknapp {
 	background-color: #d9e35e;
 	border-color: #dbdbdb;
+}
+
+.brukernavn {
+	text-align: center;
 }

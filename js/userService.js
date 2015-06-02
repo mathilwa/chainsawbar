@@ -18,6 +18,10 @@ module.exports = {
 
 			isMissingName : function() {
 				return (getName() || '').length === 0;
+			},
+
+			clearName : function() {
+				cookies.expire('name');
 			}
 		}
 	}
