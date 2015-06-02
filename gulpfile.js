@@ -21,7 +21,7 @@ var paths = {
     },
     css: {
         all: './css/**/*.css',
-        src: './css/app.css'
+        src: './css/chainsaw.css'
     },
     dist: './dist'
 };

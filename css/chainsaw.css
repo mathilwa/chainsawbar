@@ -1,0 +1,126 @@
+/*
+height
+width
+float
+margin
+padding
+display
+backgroundcolors
+borders
+text
+font
+fontcolors
+*/
+
+body {
+	margin: 0;
+	font-family: 'Gudea', sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+.navcontainer {
+	width: 100%;
+	background-color: #3b3b3b;
+}
+
+.meny {
+	width: 60%;
+	height: 80px;
+	margin: 0 auto;
+	background-color: #3b3b3b;	
+	text-align: center;
+	color: #0067c5;
+}
+
+.meny a {
+	float: left;
+	padding: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: #dbdbdb;
+}
+
+.tabmeny {
+	margin: 0;
+	padding-top: 30px;
+	padding-left: 65px;
+	display: table;
+}
+
+.tabmeny ul {
+	margin: 0 auto;
+}
+
+.tabmeny li {
+	padding: 0 40px;
+	display: inline;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+}
+
+.tabmeny li:hover {
+	color: #0ca9e1;
+}
+
+.tabmeny .tabvalgt {
+	color: #0ca9e1;
+}
+
+.innhold {
+	width: 60%;
+	min-height: 1000px;
+	margin: 0 auto;
+	background-color: #dbdbdb;
+}
+
+.bestilling h1 {
+	margin-top: 0;
+	padding: 50px;
+	text-align: center;
+	color: #3b3b3b;	
+}
+
+.bestilling li {
+	width: 50%;
+	min-height: 30px;
+	margin: 10px auto;
+	padding: 20px 0 10px 25px;
+	background-color: #fff;
+	border: 2px solid lightgrey;
+    border-radius: 5px;
+}
+
+.bestilling ul {
+	padding-left: 0;
+}
+
+
+.bestilling span {
+	display: table;
+}
+
+.bestillknapp {
+	margin-right: 15px;
+	margin-top: -7px;
+	padding: 5px;
+	float: right;
+	background-color: #0ca9e1;
+	border: 2px solid #0ca9e1;
+    border-radius: 5px;
+	color: #fff;
+}
+
+.active {
+	height: 200px;
+}
+
+.active .bestillknapp {
+	background-color: #d9e35e;
+	border-color: #dbdbdb;
+}
