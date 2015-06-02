@@ -2,11 +2,11 @@ var React = require('react');
 
 var io = require('socket.io-client');
 
-var App = require('./components/App.react');
+var Drinkliste = require('./components/Drinkliste.react');
 
 React.renderComponent(
-    <App />,
-    document.getElementById('app')
+    <Drinkliste />,
+    document.getElementById('drinkliste')
 );
 
 
