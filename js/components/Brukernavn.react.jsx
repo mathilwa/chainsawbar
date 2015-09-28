@@ -1,5 +1,5 @@
 var React = require('react');
-var bestillerApp = require('../BestillerApp');
+var bestillerApp = require('../bestillerApp');
 
 var currentUser = require('../userService').currentUser();
 
